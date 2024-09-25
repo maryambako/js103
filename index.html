@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Example</title>
+    <style>
+        .form {
+            margin-bottom: 1em;
+        }
+       
+    </style>
+</head>
+<body>
+    <form id="myForm">
+        <div class="form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+            <div id="emailError" class="error"></div>
+        </div>
+        <div class="form ">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <div id="nameError" class="error"></div>
+        </div>
+        <div class="form">
+            <label for="name">Password:</label>
+            <input type="password" id="Password" name="Password"> <button type="button" id="showPassword">👁️</button>
+            <div id="nameError" class="error"></div>
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+<script>
+    document.querySelector('#showPassword').addEventListener('click', ()=>{
+        let pass = document.querySelector('#Password');
+        console.log(pass['type'])
+
+        if(pass['type'] == 'password'){
+            pass['type'] = 'text'
+        }else{
+            pass['type'] = 'password'
+        }
+
+
+    })
+
+</script>
+</html>   
